@@ -7,29 +7,51 @@ body{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	font-family: Helvetica;
-	background: #f2f2f2ff;
+	font-family: Trebuchet MS, sans-serif;
+}
+
+.bg{
+	position: fixed;
+	z-index: -1;
+	height: 105%;
+	width: 105%;
+	background-color:#467302;
+}
+.shape1{
+	height:100vh;
+	width: 100vh;
+	border-radius: 50%;
+	background-color:#1B4001;
+	position: absolute;
+	top: 50%;
+    box-shadow: inset 2px 2px 10px 2px rgba(0, 0, 0, 0.3);
+}
+.shape2{
+	height:100vh;
+	width: 100vh;
+	border-radius: 50%;
+	background-color:#1B4001;
+	position: absolute;
+	top: -70%;
+    left: -70%;
+    box-shadow: inset 2px 2px 10px 2px rgba(0, 0, 0, 0.3);
 }
 
 nav{
 	position: fixed;
-	height:10vh;
+	height:5vh;
 	width: 100%;
-	background: #ecbd61ff;
-	background-image: url("svg/bg.svg"); 
-	background-position: center;
-	background-size: cover;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background:rgba(255,255,255,0.9);
 	z-index: 10;
-	box-shadow: 0 2px 10px 5px rgba(0,0,0,0.3);
+	
 }
 nav img{
 	height: 5vh;
 }
 nav h1{
-	font-family: Rockabye;
 	font-size: 5vh;
 }
 
@@ -42,8 +64,9 @@ ul{
 	display: flex;
 	justify-content: flex-start;
 	overflow-x: scroll;
-	margin-top:10vh;
+	margin-top:5vh;
 	z-index: 9;
+	
 	/*box-shadow: 0 10px 10px 5px rgba(0,0,0,0.3);*/
 }
 
@@ -79,6 +102,19 @@ ul li a{
 
 
 
+.sezione{
+	margin-top: 14vh;
+	height: 10vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*background: #ecbd61ff;*/
+}
+
+.sezione img{
+	height: 17vh;
+}
 
 .panini{
 	width: 100%;
@@ -87,29 +123,80 @@ ul li a{
 	justify-content: center;
 }
 .menu{
-    min-height: 100vh;
-    width: 95%;
-    margin-top:3%;
-    margin-bottom: 3%;
+    min-height: 30vh;
+    width: 85%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-top:16.4vh;
+    margin-top:10%;
+    padding-bottom: 7%;
+    background: linear-gradient(-45deg,rgba(255,255,255,0.7),rgba(255,255,255,0.1));
+    border:solid 0.1vh white;
+    backdrop-filter: blur(20px);
+    border-radius: 4%;
+}
+
+.menuPanino{
+	min-height: 30vh;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top:10%;
+    padding-bottom: 7%;
+    background:rgba(255,255,255,0.7);
+    border:solid 0.1vh white;
+}
+
+.menuPanino img{
+	height: 20vh;
+	margin-bottom: 2%;
+	   border-radius: 0.5%;
+}
+
+#primo{
+   margin-top:30%;
+}
+#ultimo{
+	margin-bottom: 3%;
+}
+
+.menu h2, .menuPanino h2{
+	text-transform: uppercase;
+}
+
+.menuPanino h2{
+	margin-bottom: 2%;
 }
 
 .wrap{
 	height: 44vh;
-	width: 44vh;
+	width: 45vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 30%;
+	margin:2%;
+	margin-top: 18%;
+	background: linear-gradient(45deg,#4369de,#74a9e8);
+	box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.3);
+	border-radius: 5%;
 }
 
-@media (min-width: 966px){
+
+@media (min-width: 313px){
 
 
+	.sezione{
+		margin-top: 17vh;
+	}
+}
+
+@media (min-width: 1448px){
+
+    
+	
 	ul{
 		justify-content: center;
 		padding: 1%;
@@ -117,9 +204,10 @@ ul li a{
 }
 
 
-@media (min-width: 795px){
+
+@media (min-width: 742px){
 	.wrap{
-         margin-top: 10%;
+         margin-top: 2%;
 	}
 }
 
@@ -137,30 +225,27 @@ ul li a{
 .titolo{
 	height:4vh;
 	width: 90%;
-	padding-bottom: 2%;
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
+	text-align: center;
 	font-size: 4vh;
-	font-family: Rockabye;
+	padding-top: 5%;
 }
 
 .titoloD{
 	height:4vh;
 	width: 90%;
-	padding-bottom: 2%;
+	padding-top: 5%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-size: 4vh;
-	font-family: Rockabye;
+
 }
 
 /*#primo{
 	margin-top: 10%;
 }*/
 .box img{
-	height: 100%;
+	height: 80%;
 }
 
 .descrizione{
@@ -172,9 +257,8 @@ ul li a{
 	width:40vh;
 	transition: 1s;
 	background: #ecbd61ff;
-	background-image: url("svg/bg.svg");
-	background-size: cover;
-	background-position: center;
+	background: linear-gradient(45deg,#4369de,#74a9e8);
+	border-radius: 0 0 8% 8%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -191,7 +275,6 @@ ul li a{
 .prezzoD{
 	margin-top:5%;
 	font-size: 4vh;
-	font-family: Rockabye;
 }
 
 .desc{
@@ -201,6 +284,10 @@ ul li a{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+#pirata{
+	font-size: 2vh;
+	font-weight: 700;
 }
 
 h2{
@@ -220,8 +307,40 @@ h2{
 	margin: 2% 0;
 }
 .row p{
-	font-family: Rockabye;
-	font-size: 4vh;
+	font-size: 3vh;
+	font-weight: 700;
+}
+
+.rowpanino{
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: left;
+	margin: 2% 0;
+	padding: 2%;
+}
+
+.rowpanino  p{
+	font-size: 3vh;
+	font-weight: 700;
+}
+
+.rowpanino > p{
+	margin-top: 2%;
+	text-align: center;
+}
+
+.paninoDesc .titoloPanino{
+	text-transform: uppercase;
+	font-size: 3.4vh;
+	margin-bottom: 5%;
+	color: #467302;
+}
+
+.rowpanino .ingPanino{
+	font-style:italic;
+	font-size: 2.5vh;
 }
 
 .row .pietanza{
