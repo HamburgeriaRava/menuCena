@@ -13,18 +13,29 @@ body{
 	flex-direction: column;
 	align-items: center;
 	font-family: BlockBe, Trebuchet MS, sans-serif;
+	background:#736854;
 }
 
-.bg{
+/*.bg{
 	position: fixed;
 	z-index: -1;
-	height: 120%;
+	height: 100%;
 	width: 100%;
-	background-color:white;
+	background:#fdcb6e;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 	flex-direction: column;
 	align-items: center;
+
+}*/
+/*.shape1{
+	height: 25vh;
+	width: 100%;
+	background: #96bb7c;
+	border: #96bb7c;
+}*/
+
+.bg svg{
 
 }
 
@@ -59,12 +70,15 @@ body{
 */
 nav{
 	position: fixed;
-	height:5vh;
+	height:10vh;
 	width: 100%;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	justify-content: flex-start;
 	align-items: center;
-	background:rgba(255,255,255,1);
+	background-image: url("svg/nav.svg");
+	background-size: cover;
+	background-position: center;
 	z-index: 10;
 	
 }
@@ -84,7 +98,7 @@ ul{
 	display: flex;
 	justify-content: flex-start;
 	overflow-x: scroll;
-	margin-top:5vh;
+	margin-top:7vh;
 	z-index: 9;
 	
 	/*box-shadow: 0 10px 10px 5px rgba(0,0,0,0.3);*/
@@ -155,8 +169,10 @@ ul li a{
     /*background: linear-gradient(-45deg,rgba(255,255,255,0.7),rgba(255,255,255,0.1));
     border:solid 0.1vh white;
     backdrop-filter: blur(20px);*/
-    background:#D99768;
-    border-radius: 4%;
+    background:#FADD6A;
+    background: #736854;
+box-shadow:  20px 20px 60px #625847,
+             -20px -20px 60px #847861;
 
 }
 
@@ -180,7 +196,7 @@ ul li a{
 }
 
 #primo{
-   margin-top:30%;
+   margin-top:35%;
 }
 #ultimo{
 	margin-bottom: 3%;
@@ -192,6 +208,7 @@ ul li a{
 }
 
 .menuPanino h2{
+	margin-top:5%;
 	margin-bottom: 2%;
 }
 
@@ -337,51 +354,71 @@ h2{
 	margin-right: 2%;
 }
 .row p{
-	font-size: 3vh;
-	font-weight: 200;
+	font-size: 2.7vh;
+	font-weight: 700;
+	font-family: Montserrat;
 }
 
 .rowpanino{
 	width: 90%;
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: left;
 	margin: 5% 0;
 	padding: 2%;
-	background:#D99768;
+	background:#78260aff;
 	border-radius: 5%;
 	padding: 6%;
 	/*box-shadow: 5px 5px 5px 0px #572300;*/
+
+	background-image: url("svg/bg.svg");
+	background-size: cover;
+	background-position: center;
+}
+
+.rowpanino > img{
+	height: 11vh;
+	position: absolute;
+	top: -15px;
+	right: -10px;
 }
 
 .rowpanino  p{
-	font-size: 3vh;
+	font-size: 3.2vh;
 	font-weight: 700;
-	color: #572300;
+	color: #D14E0D;
+	font-family: Montserrat;
+
 }
 
 .rowpanino > p{
-	margin-top: 2%;
+	margin-top: 4%;
 	text-align: center;
-	font-weight: 200;
+	font-weight: 700;
 }
+
 
 .menu .titolo{
 	color: #492213;
 }
 
 .paninoDesc .titoloPanino{
+	font-family: BlockBE;
 	text-transform: uppercase;
 	font-size: 4vh;
 	margin-bottom: 5%;
-	color:#332418;
+	color: #D14E0D;
+	font-weight: 100;
 }
+
+
 
 .rowpanino .ingPanino{
 	font-size: 2.5vh;
-	color: black;
-	font-weight: 100;
+	color: white;
+	font-weight: 700;
 }
 
 .row .pietanza{
@@ -397,14 +434,52 @@ h2{
 	width: 80%;
 	height: 0.2vh;
 	background: rgba(0,0,0,0.2);
+	z-index: 3;
+	margin: 2%;
+}
+
+.spanP{
+	width: 80%;
+	height: 1px;
+	background: rgba(0,0,0,0.2);
+	margin: 2%;
 }
 
 
+@media (min-width: 360px){
+	
+.rowpanino{
+		width: 40vh;
+	}
 
-@media (min-width: 358px){
+
+}
+@media (min-width: 370px){
 	
 .rowpanino{
 		width: 35vh;
+	}
+
+
+}
+
+.paninoDesc > img{
+	height: 3vh;
+}
+
+@media (min-width: 396px){
+	
+.rowpanino{
+		width: 40vh;
+	}
+
+
+}
+
+@media (min-width: 500px){
+	
+.rowpanino{
+		width: 45vh;
 	}
 
 

@@ -162,7 +162,7 @@ var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar").style.height = "5vh";
+    document.getElementById("navbar").style.height = "10vh";
     document.getElementById("navbar").style.top = "0vh";
     document.getElementById("titolo").style.height = "5vh";
     document.getElementById("ul").style.top = "0vh";
